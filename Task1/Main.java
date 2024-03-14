@@ -27,15 +27,17 @@ public class Main {
 
      public static void hitungLimas(Scanner scannerObj){
         System.out.println("\nINPUT");
-        System.out.print("Input Tinggi Alas\t: ");
-        double tinggiAlas = scannerObj.nextDouble();
-        System.out.print("Input Alas \t\t: ");
-        double alas = scannerObj.nextDouble();
+        System.out.print("Input a\t: ");
+        double a = scannerObj.nextDouble();
+        System.out.print("Input b \t\t: ");
+        double b = scannerObj.nextDouble();
+        System.out.print("Input c \t\t: ");
+        double c = scannerObj.nextDouble();
         System.out.print("Input Tinggi Limas\t: ");
         double tinggiLimas = scannerObj.nextDouble();
 
         System.out.println("\nOUTPUT");
-        Limas limas = new Limas(tinggiAlas, alas, tinggiLimas);
+        Limas limas = new Limas(a, b, c, tinggiLimas);
         System.out.println("Luas Segitiga\t\t: " + limas.luas());
         System.out.println("Keliling Segitiga\t: " + limas.keliling());
         System.out.println("Volume Limas\t\t: " + limas.volume());

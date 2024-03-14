@@ -1,19 +1,20 @@
 package BangunDatar;
 
 public class Segitiga implements BangunDatar {
-    double tinggiAlas, alas;
+    public double a, b, c;
 
-    public Segitiga(double tinggiAlas, double alas){
-        this.tinggiAlas = tinggiAlas;
-        this.alas = alas;
+    public Segitiga(double a, double b, double c){
+        this.a = a;
+        this.b = b; 
+        this.c = c;
     }
 
     public double luas(){
-        return alas * tinggiAlas / 2.0;
+        double s = (a + b + c) / 2.0;
+        return Math.sqrt(s * (s-a) * (s-b) * (s-c)); 
     }
 
     public double keliling(){
-        double sisimiring = Math.sqrt((1.0/2.0*(alas) * 1.0/2.0*(alas)) +  (tinggiAlas * tinggiAlas));
-        return (2 * sisimiring) + alas; //asumsi segitiga sama kaki
+        return a + b + c;
     };
 }

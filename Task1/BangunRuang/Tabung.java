@@ -1,10 +1,10 @@
 package BangunRuang;
-import BangunDatar.Segitiga;
+import BangunDatar.Lingkaran;
 
-public class Tabung extends Segitiga implements BangunRuang{
+public class Tabung extends Lingkaran implements BangunRuang{
     double tinggiTabung;
     public Tabung(double jari2, double tinggiTabung){
-        super(jari2, 22.0/7.0);
+        super(jari2);
         this.tinggiTabung = tinggiTabung;
     }
 

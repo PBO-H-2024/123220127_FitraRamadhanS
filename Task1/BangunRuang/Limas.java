@@ -2,9 +2,9 @@ package BangunRuang;
 import BangunDatar.Segitiga;
 
 public class Limas extends Segitiga implements BangunRuang  {
-    double tinggiLimas;
-    public Limas(double tinggiAlas, double alas, double tinggiLimas) {
-        super(tinggiAlas, alas);
+    public double tinggiLimas;
+    public Limas(double a, double b, double c, double tinggiLimas) {
+        super(a, b, c);
         this.tinggiLimas = tinggiLimas;
     }
 
@@ -13,7 +13,7 @@ public class Limas extends Segitiga implements BangunRuang  {
     }
 
     public double luasPermukaan(){
-        return 4 * luas() ; //asumsi segitiga sama sisi
+        return luas() + tinggiLimas / 2.0 * (a + b + c); 
     }
     
 }
